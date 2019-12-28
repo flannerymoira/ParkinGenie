@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Find_Car_Park"></activity>
-        <activity android:name=".Enter_Tariff" />
         <activity android:name=".Enter_CarPark" />
         <activity
             android:name=".SplashScreen"

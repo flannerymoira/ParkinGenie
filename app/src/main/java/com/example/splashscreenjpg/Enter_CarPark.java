@@ -25,8 +25,6 @@ public class Enter_CarPark extends AppCompatActivity {
     String temp;
     int total_val, free_val;
 
-    //ArrayList carParks = new ArrayList();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,15 +32,15 @@ public class Enter_CarPark extends AppCompatActivity {
     }
 
     public void createCarPark(View view) {
-        editName = (EditText) findViewById(R.id.editText_name);
-        editWebsite = (EditText) findViewById(R.id.editText_website);
-        editAddress = (EditText) findViewById(R.id.editText_address);
-        editPhone = (EditText) findViewById(R.id.editText_phone);
-        editGPS = (EditText) findViewById(R.id.editText_gps);
-        editTotal = (EditText) findViewById(R.id.editText_totspaces);
-        editFree =  (EditText) findViewById(R.id.editText_freespaces);
-        editHeight = (EditText) findViewById(R.id.editText_height);
-        editPayment = (EditText) findViewById(R.id.editText_payment);
+        editName = findViewById(R.id.editText_name);
+        editWebsite =  findViewById(R.id.editText_website);
+        editAddress =  findViewById(R.id.editText_address);
+        editPhone =  findViewById(R.id.editText_phone);
+        editGPS =  findViewById(R.id.editText_gps);
+        editTotal =  findViewById(R.id.editText_totspaces);
+        editFree =  findViewById(R.id.editText_freespaces);
+        editHeight = findViewById(R.id.editText_HRestriction);
+        editPayment = findViewById(R.id.editText_payment);
 
         temp = editTotal.getText().toString();
         total_val = Integer.parseInt(temp);
@@ -56,19 +54,15 @@ public class Enter_CarPark extends AppCompatActivity {
                 total_val, free_val,
                 editHeight.getText().toString(), editPayment.getText().toString());
 
-        if (isInserted = true)
-        Toast.makeText(this,"Data Inserted",Toast.LENGTH_LONG).show();
-            //setContentView(R.layout.enter_car_park);
+        if (isInserted)
+            Toast.makeText(this,"Data Inserted",Toast.LENGTH_LONG).show();
         else
             Toast.makeText(this,"Data not Inserted",Toast.LENGTH_LONG).show();
     }
 
-    public void viewOwnerCarPark(View view){
+    public void viewCarPark(View view){
         startActivity(new Intent(getApplicationContext(), Find_Car_Park.class));
     }
 
-    public void addTariff(View view) {
-        startActivity(new Intent(getApplicationContext(), Enter_Tariff.class));
-    }
 }
 

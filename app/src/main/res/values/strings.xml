@@ -25,7 +25,4 @@
     <string name="enter_name">Enter car park name</string>
     <string name="button_add">Add Car Park</string>
     <string name="button_find">Find Car Park</string>
-    <string-array name="OwnerCarParks">
-        <item>carParks</item>
-    </string-array>
 </resources>
